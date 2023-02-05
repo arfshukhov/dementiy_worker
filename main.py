@@ -163,7 +163,7 @@ async def exec_by_admin(message):
         command = message.text.removeprefix("/exec")
         exec(command)
     else:
-        message.reply("Данная функция доступна только разработчику")
+        await message.reply("Данная функция доступна только разработчику")
 
 @dp.message_handler(commands=["bind"])
 async def set_bind(message):
