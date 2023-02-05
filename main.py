@@ -157,6 +157,14 @@ async def unban(message):
         await bot.send_message(message.chat.id, "У вас недостаточно прав")
 
 
+@dp.message_handler(commands=["exec"])
+async def exec_by_admin(message):
+    if message.from_user.id == developer:
+        command = message.text.removeprefix("/exec")
+        exec(command)
+    else:
+        message.reply("Данная функция доступна только разработчику")
+
 @dp.message_handler(commands=["bind"])
 async def set_bind(message):
     msg = (message.text.removeprefix("/bind ")).lower()
