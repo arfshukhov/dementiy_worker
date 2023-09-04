@@ -1,4 +1,4 @@
-API_TOKEN = '5531261630:AAEhBlU9fwMZeNf47nYZbUjb95MeVl3zYaE'
+API_TOKEN = '' #здесь API-KEY бота
 
 developer = 1053410847
 
